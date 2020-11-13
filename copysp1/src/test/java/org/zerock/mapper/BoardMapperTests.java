@@ -13,6 +13,7 @@ import org.zerock.domain.BoardVO;
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
 public class BoardMapperTests {
+
     @Setter(onMethod=@__({@Autowired}))
     private BoardMapper mapper;
 
@@ -25,7 +26,7 @@ public class BoardMapperTests {
     public void testInsert() {
         BoardVO board = new BoardVO();
         board.setTitle("새로 작성하는 글");
-        board.setContent("새로 작성하는 내용");
+        board.setContent("새로 작성하는 a내용");
         board.setWriter("newnew");
 
         mapper.insert(board);

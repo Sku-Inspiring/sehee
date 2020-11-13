@@ -31,5 +31,8 @@ select * from tbl_board where bno > 0
     update tbl_board set title=#{title}, content=#{content}, writer=#{writer}, updatedate = sysdate where bno=#{bno}
 </update>
 
+<delete id="delete">
+    delete from tbl_board where bno = #{bno}
+</delete>
 </mapper>
 
