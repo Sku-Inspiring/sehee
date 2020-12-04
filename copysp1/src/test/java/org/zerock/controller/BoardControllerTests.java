@@ -13,7 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import org.zerock.mapper.BoardMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"file:src/main/webapp/WEB-INF/spring/root-context.xml",
@@ -40,4 +39,41 @@ public class BoardControllerTests {
                 .getModelMap()
         );
     }
+
+    @Test
+    public void testRegister() throws Exception{
+        String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/register")
+                                            .param("title", "title")
+                                            .param("content", "content")
+                                            .param("writer", "writer")).andReturn().getModelAndView().getViewName();
+
+        log.info(resultPage);
+    }
+    @Test
+    public void testGet() throws Exception{
+        log.info(mockMvc.perform(MockMvcRequestBuilders.get("/board/get")
+                                                        .param("bno","2"))
+                                                        .andReturn()
+                                                        .getModelAndView().getModelMap());
+    }
+    @Test
+    public void testModify() throws Exception{
+        String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/modify")
+                .param("bno", "1")
+                .param("title", "update title")
+                .param("content", "update content")
+                .param("writer", "update writer")).andReturn().getModelAndView().getViewName();
+
+        log.info(resultPage);
+    }
+    @Test
+    public void testRemove() throws Exception{
+        String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/remove")
+                .param("bno", "3")
+        ).andReturn().getModelAndView().getViewName();
+
+        log.info(resultPage);
+    }
 }
+
+
