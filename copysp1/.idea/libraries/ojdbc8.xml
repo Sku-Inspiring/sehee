@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="ojdbc8">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../../sqldeveloper-20.2.0.175.1842-x64/sqldeveloper/jdbc/lib/ojdbc8.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" recursive="false" />
   </library>
 </component>

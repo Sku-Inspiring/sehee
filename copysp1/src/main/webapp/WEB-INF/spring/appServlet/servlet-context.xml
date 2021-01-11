@@ -17,6 +17,8 @@
     <context:component-scan base-package="org.zerock.controller"/>
     <mybatis-spring:scan base-package="org.zerock.mapper"/>
     <context:component-scan base-package="org.zerock.service"/>
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+
     <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <beans:property name="prefix" value="/WEB-INF/views/" />
         <beans:property name="suffix" value=".jsp"/>
