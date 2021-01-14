@@ -32,6 +32,10 @@ public class BoardController {
         rttr.addFlashAttribute("result",board.getBno());
         return "redirect:/board/list";
     }
+    @GetMapping("/register")
+    public void register(){
+
+    }
 
     @GetMapping("/get")
     public void get(@RequestParam("bno") Long bno, Model model){

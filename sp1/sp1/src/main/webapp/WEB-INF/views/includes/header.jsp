@@ -378,3 +378,6 @@
         <!-- /.navbar-static-side -->
     </nav>
 
+</div>
+</body>
+</html>
