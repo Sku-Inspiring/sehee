@@ -26,7 +26,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Board List Page
-                        <button id="regbtn" type="button" class="btn btn-xs pull-right">Register New Board</button>
+                        <button id="regBtn" type="button" class="btn btn-xs pull-right">Register New Board</button>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -46,10 +46,33 @@
                                     <td><c:out value="${board.title}"/></td>
                                     <td><c:out value="${board.writer}"/></td>
                                     <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}"/></td>
-<%--                                    <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updateDate}"/></td>--%>
+                                    <td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updatedate}"/></td>
                                 </tr>
                             </c:forEach>
                         </table>
+
+                        <div class="pull-right">
+                            <ul class="pagination">
+                                <c:if test="${pageMaker.prev}">
+                                <li class="paginate_button previous"><a href="#">Previous</a> </li>
+                                </c:if>
+
+                                <c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
+                                    <li class="paginate_button ${pageMaker.cri.pageNum == num ? "active":""}"><a href="${num}">${num}</a> </li>
+                                </c:forEach>
+
+                                <c:if test="${pageMaker.next}">
+                                    <li class="paginate_button next"><a href="${pageMaker.endPage +1 }">Next</a> </li>
+                                </c:if>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <form id='actionForm' action="/board/list" method='get'>
+                        <input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
+                        <input type='hidden' name='amount' value='${pageMaker.cri.amount}'>
+                    </form>
+
                         <!-- Modal  추가 -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
                              aria-labelledby="myModalLabel" aria-hidden="true">
@@ -99,6 +122,15 @@
         }
         $("#regBtn").on("click", function () {
             self.location = "/board/register";
+        });
+
+        var actionForm = $("#actionForm");
+
+        $(".paginate_button a").on("click", function (e) {
+            e.preventDefault();
+            console.log('click');
+            actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+            actionForm.submit();
         });
     });
 </script>
