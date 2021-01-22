@@ -1,3 +1,5 @@
+// mapper interface로 메소드를 선언하고 SQL에 대한 처리는 xml파일에서 이루어짐
+
 package org.zerock.mapper;
 
 import org.apache.ibatis.annotations.Select;

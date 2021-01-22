@@ -41,6 +41,7 @@ public class RootConfig {
     return dataSource;
   }
 
+  // SqlSessionFactory을 통해서 sqlsession을 만들어 내고 sqlsession을 통해서 커넥션 생성하고 DB로 원하는 sql문을 전달하고 전달받음
   @Bean
   public SqlSessionFactory sqlSessionFactory() throws Exception {
     SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
