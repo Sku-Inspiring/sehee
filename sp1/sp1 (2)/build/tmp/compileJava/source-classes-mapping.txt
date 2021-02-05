@@ -26,3 +26,13 @@ org/zerock/domain/Ticket.java
  org.zerock.domain.Ticket
 org/zerock/controller/SampleController.java
  org.zerock.controller.SampleController
+org/zerock/domain/ReplyVO.java
+ org.zerock.domain.ReplyVO
+org/zerock/service/ReplyServiceImpl.java
+ org.zerock.service.ReplyServiceImpl
+org/zerock/service/ReplyService.java
+ org.zerock.service.ReplyService
+org/zerock/mapper/ReplyMapper.java
+ org.zerock.mapper.ReplyMapper
+org/zerock/controller/ReplyController.java
+ org.zerock.controller.ReplyController
