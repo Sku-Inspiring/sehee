@@ -30,9 +30,11 @@ org/zerock/domain/ReplyVO.java
  org.zerock.domain.ReplyVO
 org/zerock/service/ReplyServiceImpl.java
  org.zerock.service.ReplyServiceImpl
-org/zerock/service/ReplyService.java
- org.zerock.service.ReplyService
-org/zerock/mapper/ReplyMapper.java
- org.zerock.mapper.ReplyMapper
 org/zerock/controller/ReplyController.java
  org.zerock.controller.ReplyController
+org/zerock/mapper/ReplyMapper.java
+ org.zerock.mapper.ReplyMapper
+org/zerock/service/ReplyService.java
+ org.zerock.service.ReplyService
+org/zerock/domain/ReplyPageDTO.java
+ org.zerock.domain.ReplyPageDTO
