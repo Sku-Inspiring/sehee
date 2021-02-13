@@ -7,7 +7,8 @@
 --%>
 <%@ page language="java"  contentType="text/html; charset=UTF-8" pageEncoding="utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%--<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>--%>
 
 <%@include file="../includes/header.jsp" %>
 
@@ -69,16 +70,17 @@
                 <i class="fa fa-comments fa-fw"></i> Reply
                 <button id='addReplyBtn' class='btn btn-primary btn-xs pull-right'>New Reply</button>
             </div>
+                <!-- /.panel-heading -->
                 <div class="panel-body">
                     <ul class="chat">
-                        <li class="left clearfix" data-rno="12">
-
-                        </li>
                     </ul>
+                    <!-- ./ end ul -->
                 </div>
-            <div class="panel-footer"></div>
+                <!-- /.panel .chat-panel -->
+                <div class="panel-footer"></div>
         </div>
     </div>
+    <!-- ./ end row -->
 </div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -126,7 +128,7 @@
     $(document).ready(function () {
 
         var bnoValue = '<c:out value="${board.bno}"/>';
-        // var replyUL = $(".chat");
+        var replyUL = $(".chat");
 
         showList(1);
 
@@ -147,13 +149,15 @@
                 }
                 for (var i = 0, len = list.length || 0; i < len; i++) {
                     str +="<li class='left clearfix' data-rno='"+list[i].rno+"'>";
-                    str +="  <div><div class='header'><strong class='primary-font'>["
-                        +list[i].rno+"] "+list[i].replyer+"</strong>";
+                    str +="  <div><div class='header'><strong class='primary-font'>"
+                            +list[i].replyer+"</strong>";
                     str +="    <small class='pull-right text-muted'>"
                         +replyService.displayTime(list[i].replyDate)+"</small></div>";
                     str +="    <p>"+list[i].reply+"</p></div></li>";
                 }
-                $(".chat").html(str);
+                replyUL.html(str);
+
+                showReplyPage(replyCnt);
             });
         }
         var modal = $(".modal");
@@ -194,9 +198,9 @@
         });
 
         //댓글 조회 클릭 이벤트 처리
-        $(".chat").on("click", "li", function (e){
+        $(".chat").on("click", "li", function(e) {
             var rno = $(this).data("rno");
-            replyService.get(rno, function (reply){
+            replyService.get(rno, function(reply) {
                 modalInputReply.val(reply.reply);
                 modalInputReplyer.val(reply.replyer);
                 modalInputReplyDate.val(replyService.displayTime(reply.replyDate)).attr("readonly", "readonly");
@@ -215,7 +219,7 @@
             replyService.update(reply, function (result) {
                 alert(result);
                 modal.modal("hide");
-                showList(1);
+                showList(pageNum);
             });
         });
 
@@ -225,8 +229,55 @@
             replyService.remove(rno, function (result) {
                 alert(result);
                 modal.modal("hide");
-                showList(1);
+                showList(pageNum);
             });
+        });
+        // 댓글 페이지 번호 출력
+        var pageNum = 1;
+        var replyPageFooter = $(".panel-footer")
+        function showReplyPage(replyCnt) {
+            var endNum = Math.ceil(pageNum / 10.0) * 10;
+            var startNum = endNum - 9;
+
+            var prev = startNum != 1;
+            var next = false;
+
+            if(endNum * 10 >= replyCnt){
+                endNum = Math.ceil(replyCnt/10.0);
+            }
+            if(endNum * 10 < replyCnt){
+                next = true;
+            }
+            var str = "<ul class='pagination pull-right'>";
+
+            if(prev){
+                str+="<li class='page-item'><a class='page-link' href='"+(startNum -1)+"'>Previous</a></li>";
+            }
+            for(var i = startNum ; i <= endNum; i++){
+
+                var active = pageNum == i? "active":"";
+
+                str+= "<li class='page-item "+active+" '><a class='page-link' href='"+i+"'>"+i+"</a></li>";
+            }
+
+            if(next){
+                str+= "<li class='page-item'><a class='page-link' href='"+(endNum + 1)+"'>Next</a></li>";
+            }
+
+            str += "</ul></div>";
+
+            console.log(str);
+
+            replyPageFooter.html(str);
+        }
+        // 페이지 버튼 클릭 시 새로운 댓글 가지고 오기
+        replyPageFooter.on("click", "li a", function (e) {
+            e.preventDefault();
+            console.log("page click");
+            var targetPageNum = $(this).attr("href");
+            console.log("targetPageNum: " + targetPageNum);
+            pageNum = targetPageNum;
+            showList(pageNum);
         });
     });
 </script>
@@ -245,18 +296,18 @@
     });
 </script>
 
-<script>
-    console.log("===========");
-    console.log("JS TEST");
+<%--<script>--%>
+<%--    console.log("===========");--%>
+<%--    console.log("JS TEST");--%>
 
-    var bnoValue = '<c:out value="${board.bno}"/>';
+<%--    var bnoValue = '<c:out value="${board.bno}"/>';--%>
 
-    replyService.add({
-        reply:"JS TEST", replyer:"tester", bno:bnoValue
-    }, function (result) {
-        alert("RESULT"+result);
-    });
-</script>
+<%--    replyService.add({--%>
+<%--        reply:"JS TEST", replyer:"tester", bno:bnoValue--%>
+<%--    }, function (result) {--%>
+<%--        alert("RESULT"+result);--%>
+<%--    });--%>
+<%--</script>--%>
 <%--<script>--%>
 <%--    console.log("===========");--%>
 <%--    console.log("JS TEST");--%>
@@ -269,11 +320,11 @@
 <%--        }--%>
 <%--    });--%>
 <%--</script>--%>
-<script>
-        console.log("===========");
-        console.log("JS TEST");
-    replyService.get(10, function (data) {
-        console.log(data);
-    })
-</script>
+<%--<script>--%>
+<%--        console.log("===========");--%>
+<%--        console.log("JS TEST");--%>
+<%--    replyService.get(10, function (data) {--%>
+<%--        console.log(data);--%>
+<%--    })--%>
+<%--</script>--%>
 <%@include file="../includes/footer.jsp" %>

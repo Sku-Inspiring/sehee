@@ -74,7 +74,7 @@ var replyService = (function(){
         });
     }
     function get(rno, callback, error){
-        $.get("/replies" + rno + ".json", function(result){
+        $.get("/replies/" + rno + ".json", function(result) {
             if (callback){
                 callback(result);
             }

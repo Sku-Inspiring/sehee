@@ -1,9 +1,13 @@
 org/zerock/mapper/TimeMapper.java
  org.zerock.mapper.TimeMapper
+org/zerock/domain/Ticket.java
+ org.zerock.domain.Ticket
 org/zerock/service/BoardService.java
  org.zerock.service.BoardService
 org/zerock/config/ServletConfig.java
  org.zerock.config.ServletConfig
+org/zerock/domain/ReplyVO.java
+ org.zerock.domain.ReplyVO
 org/zerock/domain/PageDTO.java
  org.zerock.domain.PageDTO
 org/zerock/config/RootConfig.java
@@ -14,27 +18,23 @@ org/zerock/domain/BoardVO.java
  org.zerock.domain.BoardVO
 org/zerock/controller/BoardController.java
  org.zerock.controller.BoardController
-org/zerock/domain/Criteria.java
- org.zerock.domain.Criteria
-org/zerock/service/BoardServiceImpl.java
- org.zerock.service.BoardServiceImpl
-org/zerock/config/WebConfig.java
- org.zerock.config.WebConfig
-org/zerock/mapper/BoardMapper.java
- org.zerock.mapper.BoardMapper
-org/zerock/domain/Ticket.java
- org.zerock.domain.Ticket
 org/zerock/controller/SampleController.java
  org.zerock.controller.SampleController
-org/zerock/domain/ReplyVO.java
- org.zerock.domain.ReplyVO
 org/zerock/service/ReplyServiceImpl.java
  org.zerock.service.ReplyServiceImpl
+org/zerock/service/BoardServiceImpl.java
+ org.zerock.service.BoardServiceImpl
 org/zerock/controller/ReplyController.java
  org.zerock.controller.ReplyController
 org/zerock/mapper/ReplyMapper.java
  org.zerock.mapper.ReplyMapper
+org/zerock/config/WebConfig.java
+ org.zerock.config.WebConfig
+org/zerock/mapper/BoardMapper.java
+ org.zerock.mapper.BoardMapper
 org/zerock/service/ReplyService.java
  org.zerock.service.ReplyService
+org/zerock/domain/Criteria.java
+ org.zerock.domain.Criteria
 org/zerock/domain/ReplyPageDTO.java
  org.zerock.domain.ReplyPageDTO
