@@ -11,10 +11,13 @@ import org.springframework.context.annotation.Configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @ComponentScan(basePackages= {"org.zerock.service"})
+@ComponentScan(basePackages= {"org.zerock.aop"})
 @MapperScan(basePackages= {"org.zerock.mapper"})
+@EnableAspectJAutoProxy
 public class RootConfig {
 
   @Bean

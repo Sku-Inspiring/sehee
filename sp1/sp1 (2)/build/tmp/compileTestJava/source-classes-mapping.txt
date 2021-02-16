@@ -1,4 +1,6 @@
-org/zerock/controller/SampleControllerTest.java
- org.zerock.controller.SampleControllerTest
 org/zerock/mapper/ReplyMapperTests.java
  org.zerock.mapper.ReplyMapperTests
+org/zerock/controller/SampleControllerTest.java
+ org.zerock.controller.SampleControllerTest
+org/zerock/service/SampleServiceTests.java
+ org.zerock.service.SampleServiceTests

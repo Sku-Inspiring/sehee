@@ -4,10 +4,14 @@ org/zerock/domain/Ticket.java
  org.zerock.domain.Ticket
 org/zerock/service/BoardService.java
  org.zerock.service.BoardService
+org/zerock/aop/LogAdvice.java
+ org.zerock.aop.LogAdvice
 org/zerock/config/ServletConfig.java
  org.zerock.config.ServletConfig
 org/zerock/domain/ReplyVO.java
  org.zerock.domain.ReplyVO
+org/zerock/service/SampleServiceImpl.java
+ org.zerock.service.SampleServiceImpl
 org/zerock/domain/PageDTO.java
  org.zerock.domain.PageDTO
 org/zerock/config/RootConfig.java
@@ -28,6 +32,8 @@ org/zerock/controller/ReplyController.java
  org.zerock.controller.ReplyController
 org/zerock/mapper/ReplyMapper.java
  org.zerock.mapper.ReplyMapper
+org/zerock/service/SampleService.java
+ org.zerock.service.SampleService
 org/zerock/config/WebConfig.java
  org.zerock.config.WebConfig
 org/zerock/mapper/BoardMapper.java
