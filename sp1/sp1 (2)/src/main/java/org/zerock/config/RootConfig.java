@@ -12,12 +12,14 @@ import org.springframework.context.annotation.Configuration;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan(basePackages= {"org.zerock.service"})
 @ComponentScan(basePackages= {"org.zerock.aop"})
 @MapperScan(basePackages= {"org.zerock.mapper"})
 @EnableAspectJAutoProxy
+@EnableTransactionManagement
 public class RootConfig {
 
   @Bean

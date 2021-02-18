@@ -22,4 +22,15 @@ public class SampleServiceTests {
         log.info(service);
         log.info(service.getClass().getName());
     }
+
+    @Test
+    public void testAdd() throws Exception{
+        log.info(service.doAdd("123" , "456"));
+    }
+
+    //파라미터의 값을 잘못 넘겨줘서 예외 발생
+    @Test
+    public void testAddError() throws Exception{
+        log.info(service.doAdd("123", "ABC"));
+    }
 }
