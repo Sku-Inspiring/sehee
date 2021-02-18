@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
@@ -51,6 +52,11 @@ public class RootConfig {
     SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
     sqlSessionFactory.setDataSource(dataSource());
     return (SqlSessionFactory) sqlSessionFactory.getObject();
+  }
+
+  @Bean
+  public DataSourceTransactionManager txManager() {
+    return new DataSourceTransactionManager(dataSource());
   }
 
 }

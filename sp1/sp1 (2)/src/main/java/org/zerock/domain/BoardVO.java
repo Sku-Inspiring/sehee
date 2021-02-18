@@ -12,4 +12,7 @@ public class BoardVO {
     private String writer;
     private Date regdate;
     private Date updatedate;
+
+    //게시물 목록에 댓글의 수 추가하는 변수
+    private int replycnt;
 }
