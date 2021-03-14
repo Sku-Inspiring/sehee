@@ -28,8 +28,7 @@ select * from tbl_board where bno > 0 and rownum < 10
 from (select /*+ INDEX_DESC(tbl_board pk_board) */
  rownum rn, bno, title, content, writer, regdate, updatedate, replycnt
 from tbl_board
-where rownum <= #{pageNum} * #{amount}
-     )
+where rownum <= #{pageNum} * #{amount})
     where rn > (#{pageNum} - 1) * #{amount}]]>
 
 <!--<include refid="criteria"></include>-->

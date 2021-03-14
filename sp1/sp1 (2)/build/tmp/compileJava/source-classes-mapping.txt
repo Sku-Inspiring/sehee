@@ -32,23 +32,15 @@ org/zerock/aop/LogAdvice.java
  org.zerock.aop.LogAdvice
 org/zerock/config/RootConfig.java
  org.zerock.config.RootConfig
-org/zerock/mapper/Sample1Mapper.java
- org.zerock.mapper.Sample1Mapper
-org/zerock/mapper/Sample2Mapper.java
- org.zerock.mapper.Sample2Mapper
-org/zerock/service/SampleTxService.java
- org.zerock.service.SampleTxService
-org/zerock/service/SampleTxServiceImpl.java
- org.zerock.service.SampleTxServiceImpl
+org/zerock/mapper/BoardMapper.java
+ org.zerock.mapper.BoardMapper
+org/zerock/service/BoardService.java
+ org.zerock.service.BoardService
+org/zerock/service/BoardServiceImpl.java
+ org.zerock.service.BoardServiceImpl
+org/zerock/service/ReplyServiceImpl.java
+ org.zerock.service.ReplyServiceImpl
 org/zerock/domain/BoardVO.java
  org.zerock.domain.BoardVO
 org/zerock/controller/BoardController.java
  org.zerock.controller.BoardController
-org/zerock/service/ReplyServiceImpl.java
- org.zerock.service.ReplyServiceImpl
-org/zerock/service/BoardServiceImpl.java
- org.zerock.service.BoardServiceImpl
-org/zerock/service/BoardService.java
- org.zerock.service.BoardService
-org/zerock/mapper/BoardMapper.java
- org.zerock.mapper.BoardMapper
