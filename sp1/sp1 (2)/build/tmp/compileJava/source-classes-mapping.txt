@@ -26,8 +26,8 @@ org/zerock/controller/SampleController.java
  org.zerock.controller.SampleController
 org/zerock/service/SampleService.java
  org.zerock.service.SampleService
-org/zerock/config/WebConfig.java
- org.zerock.config.WebConfig
+org/zerock/controller/BoardController.java
+ org.zerock.controller.BoardController
 org/zerock/aop/LogAdvice.java
  org.zerock.aop.LogAdvice
 org/zerock/config/RootConfig.java
@@ -42,5 +42,25 @@ org/zerock/service/ReplyServiceImpl.java
  org.zerock.service.ReplyServiceImpl
 org/zerock/domain/BoardVO.java
  org.zerock.domain.BoardVO
-org/zerock/controller/BoardController.java
- org.zerock.controller.BoardController
+org/zerock/domain/AuthVO.java
+ org.zerock.domain.AuthVO
+org/zerock/mapper/MemberMapper.java
+ org.zerock.mapper.MemberMapper
+org/zerock/security/CustomAccessDeniedHandler.java
+ org.zerock.security.CustomAccessDeniedHandler
+org/zerock/security/CustomUserDetailsService.java
+ org.zerock.security.CustomUserDetailsService
+org/zerock/config/SecurityInitializer.java
+ org.zerock.config.SecurityInitializer
+org/zerock/config/WebConfig.java
+ org.zerock.config.WebConfig
+org/zerock/security/CustomLoginSuccessHandler.java
+ org.zerock.security.CustomLoginSuccessHandler
+org/zerock/config/SecurityConfig.java
+ org.zerock.config.SecurityConfig
+org/zerock/security/domain/CustomUser.java
+ org.zerock.security.domain.CustomUser
+org/zerock/domain/MemberVO.java
+ org.zerock.domain.MemberVO
+org/zerock/controller/CommonController.java
+ org.zerock.controller.CommonController
