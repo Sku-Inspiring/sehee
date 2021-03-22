@@ -52,15 +52,17 @@ org/zerock/security/CustomUserDetailsService.java
  org.zerock.security.CustomUserDetailsService
 org/zerock/config/SecurityInitializer.java
  org.zerock.config.SecurityInitializer
-org/zerock/config/WebConfig.java
- org.zerock.config.WebConfig
-org/zerock/security/CustomLoginSuccessHandler.java
- org.zerock.security.CustomLoginSuccessHandler
-org/zerock/config/SecurityConfig.java
- org.zerock.config.SecurityConfig
-org/zerock/security/domain/CustomUser.java
- org.zerock.security.domain.CustomUser
-org/zerock/domain/MemberVO.java
- org.zerock.domain.MemberVO
 org/zerock/controller/CommonController.java
  org.zerock.controller.CommonController
+org/zerock/security/CustomLoginSuccessHandler.java
+ org.zerock.security.CustomLoginSuccessHandler
+org/zerock/domain/MemberVO.java
+ org.zerock.domain.MemberVO
+org/zerock/security/domain/CustomUser.java
+ org.zerock.security.domain.CustomUser
+org/zerock/config/WebConfig.java
+ org.zerock.config.WebConfig
+org/zerock/security/CustomNoOpPasswordEncoder.java
+ org.zerock.security.CustomNoOpPasswordEncoder
+org/zerock/config/SecurityConfig.java
+ org.zerock.config.SecurityConfig

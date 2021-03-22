@@ -72,10 +72,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new CustomLoginSuccessHandler();
     }
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new CustomNoOpPasswordEncoder();
+    }
 
 
 
