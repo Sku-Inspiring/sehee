@@ -11,17 +11,15 @@
     <result property="username" column="username"/>
     <result property="regdate" column="regdate"/>
     <result property="updatedate" column="updatedate"/>
-    <collection property="authList" resultMap="authMap"/>
 </resultMap>
 
-<resultMap id="authMap" type="org.zerock.domain.AuthVO">
-    <result property="userid" column="userid"/>
-    <result property="auth" column="auth"/>
-</resultMap>
+<!--<resultMap id="authMap" type="org.zerock.domain.AuthVO">-->
+<!--    <result property="userid" column="userid"/>-->
+<!--    <result property="auth" column="auth"/>-->
+<!--</resultMap>-->
 
 <select id="read" resultMap="memberMap">
-    SELECT mem.userid, userpw, username, enabled, regdate, updatedate, auth
-    FROM tbl_member mem LEFT OUTER JOIN tbl_member_auth auth
-    on mem.userid = auth.userid WHERE mem.userid = #{userid}
+    SELECT mem.userid, userpw, username, enabled, regdate, updatedate
+    FROM tbl_member mem WHERE mem.userid = #{userid}
 </select>
 </mapper>

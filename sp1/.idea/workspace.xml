@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="905af699-acc9-4ac5-b3b5-4c16d1d67708" name="Default Changelist" comment="" />
+    <list default="true" id="905af699-acc9-4ac5-b3b5-4c16d1d67708" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/aop/LogAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/config/RootConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/config/SecurityInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/config/ServletConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/controller/BoardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/controller/CommonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/controller/ReplyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/controller/SampleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/AuthVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/BoardVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/MemberVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/PageDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/ReplyPageDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/ReplyVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/SampleVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/domain/Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/mapper/BoardMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/mapper/MemberMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/mapper/ReplyMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/mapper/TimeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/security/CustomAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/security/CustomLoginSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/security/CustomNoOpPasswordEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/security/CustomUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/security/domain/CustomUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/service/BoardService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/service/BoardServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/service/ReplyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/service/ReplyServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/service/SampleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/build/classes/java/main/org/zerock/service/SampleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/domain/AuthVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/domain/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/domain/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/security/domain/CustomUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp1 (2)/src/main/java/org/zerock/security/domain/CustomUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/src/main/resources/org/zerock/mapper/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sp1 (2)/src/main/resources/org/zerock/mapper/MemberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp1 (2)/src/main/webapp/WEB-INF/views/customLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/sp1 (2)/src/main/webapp/WEB-INF/views/customLogin.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sp1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -35,8 +76,12 @@
       <option name="presentableId" value="Default" />
       <updated>1610615883812</updated>
       <workItem from="1610615885307" duration="15000" />
+      <workItem from="1616481959049" duration="56000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="171" key="FileChooserDialogImpl" timestamp="1610615898533">
