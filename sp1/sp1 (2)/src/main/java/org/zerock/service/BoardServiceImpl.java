@@ -12,7 +12,6 @@ import org.zerock.mapper.BoardMapper;
 import java.util.List;
 
 @Log4j
-
 @Service
 //@AllArgsConstructor
 public class BoardServiceImpl implements BoardService{
@@ -41,13 +40,7 @@ public class BoardServiceImpl implements BoardService{
         log.info("remove....." + bno);
         return mapper.delete(bno) == 1;
     }
-    /*
-    @Override
-    public List<BoardVO> getList() {
-        log.info("getlist.....");
-        return mapper.getList();
-    }
-     */
+
     @Override
     public List<BoardVO> getList(Criteria cri) {
         log.info("get list with criteria: " + cri);

@@ -16,3 +16,4 @@ public class BoardVO {
     //게시물 목록에 댓글의 수 추가하는 변수
     private int replycnt;
 }
+
