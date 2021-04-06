@@ -8,7 +8,7 @@
 * IDE : IntelliJ
 * Connection pool : HikariCP 
 
-### 🛠 Software Architecture
+### 👀 Software Architecture
 ![image](https://user-images.githubusercontent.com/53335160/113684193-f4a1bf80-96ff-11eb-8007-0d35da2595e1.png)
 
 
@@ -17,7 +17,8 @@
 문제: 크롬으로 켰을때 큰 화면에서 bootstrap 오류로 드롭다운이 계속 펼쳐져있는 상태<br>
 해결방법: header.jsp파일에서 버전을 3.5.1로 바꿈
 
-문제: 오라클 DBMS에서 비밀번호 만료 오류(오류번호-28001)
+문제: 오라클 DBMS에서 비밀번호 만료 오류(오류번호-28001)<br>
+
 해결방법
 1. system 계정으로 오라클 접속
 2. 연결되어있는 DB 계정 변경 - ALTER USER user_id IDENTIFIED BY new_password;
